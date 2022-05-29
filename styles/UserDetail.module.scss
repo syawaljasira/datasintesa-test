@@ -1,0 +1,106 @@
+.userDetail__hidden {
+  opacity: 0;
+  z-index: -100;
+}
+
+.userDetail__show {
+  z-index: 100;
+  opacity: 1;
+}
+
+.userDetail__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #7b7b7b, $alpha: 0.3);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .userDetail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    width: 30%;
+    min-height: auto;
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2vw;
+    gap: 1.3vw;
+
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-size: 1.6vw;
+        font-weight: 700;
+        color: #7b7b7b;
+      }
+
+      .icon_close {
+        font-size: 1.8vw;
+        color: #7b7b7b;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 1vw;
+      }
+
+      .detail__image {
+        position: relative;
+        width: 30%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 3px solid #cacad5;
+
+        .avatar {
+          border-radius: 50%;
+        }
+      }
+
+      .detail__info {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8vw;
+
+        .detail__item {
+          display: flex;
+          justify-content: space-between;
+
+          .key {
+            width: 32%;
+            font-size: 1.2vw;
+            color: #383845;
+            font-weight: 700;
+          }
+
+          .value {
+            width: 65%;
+            font-size: 1.2vw;
+            color: #777777;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
